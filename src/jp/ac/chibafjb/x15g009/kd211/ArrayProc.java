@@ -23,12 +23,20 @@ public class ArrayProc {
 	}
 	public int linerSearch1(int s[],int n){
 		int i = 0;
-		for(int a:s){
-			if(i<100)
-				if(a == n)
-					break;
+		for(;i<100 && s[i] != n;){
 			i++;
 		}
 		return i;
+	}
+		
+	public int linerSearch2(int s[],int n){
+		int i = 99;
+		for(;i>=0 && s[i] != n;){
+			i--;
 		}
+		if(i == -1)
+			return 100;
+		else
+			return i;
+	}
 }

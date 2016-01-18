@@ -10,8 +10,6 @@ public class Kadai42 {
 		for(int a = 0;a<100;a++){
 			score[a] = (int)(Math.random()*999);
 		}
-		for(int b:score)
-			System.out.println(b);
 		Scanner s = new Scanner(System.in);
 		int s_num = s.nextInt();
 		ArrayProc a = new ArrayProc();

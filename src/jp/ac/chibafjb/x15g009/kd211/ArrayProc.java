@@ -39,4 +39,44 @@ public class ArrayProc {
 		else
 			return i;
 	}
+	
+	public int linerSearch3(double s[],double n){
+		int i = 0;
+		for(;i<100 && s[i] != n;){
+			i++;
+		}
+		return i;
+	}
+	
+	public int binarySearch1(int d[],int s){
+		int L = 0;
+		int H = 4;
+		int m = (L + H) / 2;
+		for(;L <= H && d[m] != s;){
+			if(d[m] < s)
+				L = m+1;
+			else
+				H = m-1;
+			m = (L + H) / 2;
+		}
+		if(L <= H)
+			return m;
+		return -1;
+	}
+	
+	public int binarySearch2(int d[],int s){
+		int L = 0;
+		int H = 4;
+		int m = (L + H) / 2;
+		for(;L <= H && d[m] != s;){
+			if(d[m] > s)
+				L = m+1;
+			else
+				H = m-1;
+			m = (L + H) / 2;
+		}
+		if(L <= H)
+			return m;
+		return -1;
+	}
 }

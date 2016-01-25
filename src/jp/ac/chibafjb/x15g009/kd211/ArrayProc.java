@@ -79,4 +79,61 @@ public class ArrayProc {
 			return m;
 		return -1;
 	}
+	
+	public int[] bubbleSort1(int[] num){
+		int j = num.length-1;
+		for(;j >= 1;){
+			int i = 0;
+			for(int work = 0;i < j;){
+				if(num[i] > num[i+1]){
+					work = num[i];
+					num[i] = num[i+1];
+					num[i+1] = work;
+				}
+				i++;
+			}
+			j--;
+		}
+		return num;
+	}
+	
+	public int[] bubbleSort1a(int[] num){
+		int j = num.length-1;
+		int count = 1;
+		for(;j >= 1;){
+			int i = 0;
+			System.out.format("%dサイクル目\n",count++);
+			for(int work = 0;i < j;){
+				if(num[i] > num[i+1]){
+					work = num[i];
+					num[i] = num[i+1];
+					num[i+1] = work;
+				}
+				i++;
+				for(int t:num){
+					System.out.print(t+",");
+				}
+				System.out.println();
+			}
+			j--;
+		}
+		return num;
+	}
+	
+	public int[] bubbleSort2(int[] num){
+		int j = num.length-1;
+		for(;j >= 1;){
+			int i = 0;
+			for(int work = 0;i < j;){
+				if(num[i] < num[i+1]){
+					work = num[i];
+					num[i] = num[i+1];
+					num[i+1] = work;
+				}
+				i++;
+			}
+			j--;
+		}
+		return num;
+	}
 }
